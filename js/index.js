@@ -20,7 +20,7 @@ const carouselProject = document.querySelectorAll('.carousel-project .col');
 
 carouselProject.forEach(element => {
     Array.from(element.children).forEach(child => {
-        child.style.backgroundImage = 'url(../ressources/preview/'+ child.classList[0]+'.png)';
+        child.style.backgroundImage = 'url(./ressources/preview/'+ child.classList[0]+'.png)';
         child.style.backgroundRepeat = 'no-repeat';
         child.style.backgroundSize = 'cover';
         child.style.backgroundPosition = 'center';
