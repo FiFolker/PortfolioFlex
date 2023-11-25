@@ -1,18 +1,72 @@
-function dropdown() {
-	document.getElementById("language").classList.toggle("show");
+
+const flags = document.querySelectorAll('.flag');
+
+let langs = [];
+
+onload = () => {
+	flags.forEach(flag => {
+		flag.style.backgroundImage = 'url(./ressources/icon/lang/'+flag.classList[0]+'.png)';
+		langs.push(flag.classList[0]);
+		if(flag.classList[flag.classList.length-1] != 'dropbtn') {
+			flag.addEventListener('click', () => {
+				translate(flag.classList[0], 'data-lang');
+			});
+		}
+	});
+	translate('fr', 'data-lang');
 }
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-	if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn img')) {
-		let dropdowns = document.querySelectorAll(".dropdown-content");
-		let i;
-		for (i = 0; i < dropdowns.length; i++) {
-			let openDropdown = dropdowns[i];
-			if (openDropdown.classList.contains('show')) {
-				openDropdown.classList.remove('show');
-				console.log("hide");
+class Translate{ 
+	//initialization
+	constructor(attribute, lang){
+		this.attribute = attribute;
+		this.lng = lang;	
+	}
+
+	//translate 
+	process(){
+		let _self = this;
+		let xrhFile = new XMLHttpRequest();
+		//load content data 
+		xrhFile.open("GET", "ressources/lang/"+this.lng+".json", false);
+		xrhFile.onreadystatechange = function ()
+		{
+			if(xrhFile.readyState === 4)
+			{
+				if(xrhFile.status === 200 || xrhFile.status == 0)
+				{
+					let LngObject = JSON.parse(xrhFile.responseText);
+					let allDom = document.getElementsByTagName("*");
+					for(const element of allDom){
+						let elem = element;
+						let key = elem.getAttribute(_self.attribute);
+						if(key != null) {
+							elem.innerHTML = LngObject[key]  ;
+						}
+					}
+				
+				}
 			}
 		}
+		xrhFile.send();
+    }
+}
+
+function translate(lang, tagAttr){
+    let translate = new Translate(tagAttr, lang);
+    translate.process();
+    let currLang = document.querySelector('.languages .flag').classList[0];
+	switchFlag(currLang, lang);
+	console.log("translation ...");
+}
+
+
+function switchFlag(currLang, nextLang){
+	langs[langs.indexOf(nextLang)] = currLang;
+	langs[langs.indexOf(currLang)] = nextLang;
+	for (let i = 0; i < flags.length; i++) {
+		flags[i].classList.replace(flags[i].classList[0], langs[i]);
+		flags[i].style.backgroundImage = 'url(./ressources/icon/lang/'+langs[i]+'.png)';
+		
 	}
 }

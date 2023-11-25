@@ -10,36 +10,37 @@
 	<link rel="stylesheet" href="css/footer.css">
 	<script src="js/index.js" type="module" defer></script>
 	<script src="js/translation.js" defer></script>
+	<script src="js/dropdown.js" defer></script>
 	<link rel="shortcut icon" href="ressources/icon/icon.png" type="image/x-icon">
 	
 
 </head>
 <body>
 
-	<header class="header">
+	<header  class="header">
 		<div class="header-name">
 			<a href="./index.html" class="header-link">Elouan Le Merle</a>
 		</div>
 		<div class="header-menu">
-			<a href="./index.html" class="header-link">Accueil</a>
-			<a href="./index.html#about" class="header-link">Moi</a>
-			<a href="./index.html#projects" class="header-link">Projets</a>
-			<a href="./index.html#contact" class="header-link">Contact</a>
-			<div class="dropdown header-link">
-				<button onclick="dropdown()" class="dropbtn"><img class="language-flag" src="ressources/icon/lang/french.png" alt="Français" title="Français"></button>
+			<a href="./index.html#home" data-lang="home" class="header-link"></a>
+			<a href="./index.html#about" data-lang="me" class="header-link"></a>
+			<a href="./index.html#projects" data-lang="projects" class="header-link"></a>
+			<a href="./index.html#contact" data-lang="contact" class="header-link"></a>
+			<div class="languages dropdown header-link">
+				<button onclick="dropdown('language')" class="fr flag dropbtn"></button>
 				<div id="language" class="dropdown-content">
-				  <a href="#"><img class="language-flag" src="ressources/icon/lang/uk.png" alt="English" title="English"></a>
-				  <a href="#"><img class="language-flag" src="ressources/icon/lang/spain.png" alt="Español" title="Español"></a>
+				  <a class="en flag"></a>
+				  <a class="es flag"></a>
 				</div>
 			</div>
 		</div>
 	</header>
 
 	<main>
-		<section class="home">
-			<h1>Bienvenue sur mon e-portfolio !</h1>
-			<p>Je m'appelle Elouan Le Merle. <br/> Je suis actuellement étudiant en BUT Informatique à Bordeaux</p>
-			<a href="./index.html#projects" class="btn">Projets</a>
+		<section id="home" class="home">
+			<h1 data-lang="bvn"></h1>
+			<p data-lang="presentation"></p>
+			<a data-lang="projects" href="./index.html#projects" class="btn"></a>
 			<div class="links">
 				<a href="https://github.com/FiFolker" target="_blank">
 					<img src="ressources/icon/githubWhite.png" alt="Github" title="Github">
@@ -54,17 +55,15 @@
 			
 		</section>
 		<section id="about">
-			<h1>A Propos de Moi</h1>
+			<h1 data-lang="aboutMeTitle"></h1>
 			<div class="content-about">
 				
-				<div class="about-text">
+				<div class="about-text" >
 					
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore tempore ad ipsa. Inventore ipsam impedit quam vero nobis a, obcaecati, reprehenderit magni et rem tenetur amet, nesciunt tempore fugiat totam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum in sequi ex laboriosam? Accusamus esse nam doloremque repellat quae, beatae eligendi exercitationem, blanditiis, harum velit perspiciatis quisquam fugit. Aut, quod.
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil illum deleniti, beatae unde deserunt voluptatibus placeat temporibus quas aliquid ex quasi commodi sunt repellat ea accusantium ducimus optio fugiat nobis?
-					</p>
+					<p data-lang="aboutMeText"></p>
 				</div>
 				<div class="skills">
-					<h2>Mes compétences</h2>
+					<h2 data-lang="skills"></h2>
 					<div class="skill-icons">
 						<div>
 							<div class="skill-web">
@@ -80,7 +79,7 @@
 								
 							</div>
 							<div class="skill-software">
-								<h4>Software</h4>
+								<h4 data-lang="software"></h4>
 								<div class="icons">
 									<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" title="Bash"/> 
 									<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="C" />
@@ -100,7 +99,7 @@
 								</div>
 							</div>
 							<div class="skill-others">
-								<h4>Others</h4>
+								<h4 data-lang="others"></h4>
 								<div class="icons">
 									<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git"/>
 									<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="SQL"/>
@@ -121,62 +120,77 @@
 		</section>
 		<section id="projects">
 
-			<h1>Projets</h1>
-			<div style="text-align: center;">
-				<label for="filter">Filter :</label>
-				<input type="text" id="filter" name="filter" placeholder="Filter projects">
+			<h1 data-lang="projects">Projets</h1>
+			<div class="dropdown filter">
+				<input type="text" onclick="dropdown('filter-items')" placeholder="Search.." id="input-search" class="search-btn search" onkeyup="filterFunction(this.id)">
+				<div id="filter-items" class="dropdown-search-content">
+					<div onclick="check(this)">
+						<label for="JS">JS</label>
+						<input type="checkbox" name="JS">
+					</div>
+					<div onclick="check(this)">
+						<label for="HTML">HTML</label>
+						<input type="checkbox" name="HTML">
+					</div>
+				</div>
 			</div>
 			<div class="carousel-project">
 				<div class="col">
-					<div class="CS2E"></div>
-					<div class="Analyse-Michelin"></div>
-					<div class="Biosphere7"></div>
+					<a class="CS2E"></a>
+					<a class="Analyse-Michelin"></a>
+					<a class="Biosphere7"></a>
 				</div>
 				<div class="col">
-					<div class="">Project 2</div>
-					<div class="">Project 2</div>
-					<div class="">Project 2</div>
+					<a class="">Project 2</a>
+					<a class="">Project 2</a>
+					<a class="">Project 2</a>
 				</div>
 				<div class="col">
-					<div class="">Project 3</div>
-					<div class="">Project 3</div>
-					<div class="">Project 3</div>
+					<a class="">Project 3</a>
+					<a class="">Project 3</a>
+					<a class="">Project 3</a>
 				</div>
 				<div class="col">
-					<div class="">Project 4</div>
-					<div class="">Project 4</div>
-					<div class="">Project 4</div>
+					<a class="">Project 4</a>
+					<a class="">Project 4</a>
+					<a class="">Project 4</a>
 				</div>
 				<div class="col">
-					<div class="">Project 5</div>
-					<div class="">Project 5</div>
-					<div class="">Project 5</div>
+					<a class="">Project 5</a>
+					<a class="">Project 5</a>
+					<a class="">Project 5</a>
+				</div>
+				<div class="col">
+					<a class="">Project 6</a>
+					<a class="">Project 6</a>
+					<a class="">Project 6</a>
 				</div>
 			</div>
 		</section>
 		<section id="contact" class="contact">
-			<h1>Contact</h1>
+			<h1 data-lang="contact"></h1>
 			<div class="box">
 				<form action="index.php" method="post">
 					
 
 					<div class="input-box">
-						<label for="name" class="">Votre nom</label>
+						<label data-lang="yourName" for="name" class=""></label>
 						<input placeholder="Votre nom" type="text" id="name" name="name">
 
 					</div>
 					<div class="input-box">
-						<label for="email" class="">Votre email</label>
+						<label for="email" data-lang="yourEmail" class=""></label>
 						<input placeholder="Votre email" type="text" id="email" name="email">
 
 					</div>
 					<div class="input-box message-box">
-						<label for="message">Votre message</label>
+						<label for="message" data-lang="yourMessage"></label>
 						<textarea placeholder="Votre message" id="message" name="message" rows="3" ></textarea>
 
 					</div>
 					
-					<input type="submit" name="submit" value="Envoyer">
+					
+					<e data-lang="submit"></e>
 					
 				</form>
 				

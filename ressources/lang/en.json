@@ -1,0 +1,17 @@
+{
+  "home": "Home",
+  "me": "Me",
+  "projects": "Projects",
+  "contact": "Contact",
+  "bvn": "Welcome to my e-portfolio !",
+  "presentation": "My name is Elouan Le Merle. <br/> I'm currently a student at BUT Informatic at Bordeaux",
+  "aboutMeTitle": "About Me",
+  "aboutMeText": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore tempore ad ipsa. Inventore ipsam impedit quam vero nobis a, obcaecati, reprehenderit magni et rem tenetur amet, nesciunt tempore fugiat totam? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum in sequi ex laboriosam? Accusamus esse nam doloremque repellat quae, beatae eligendi exercitationem, blanditiis, harum velit perspiciatis quisquam fugit. Aut, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil illum deleniti, beatae unde deserunt voluptatibus placeat temporibus quas aliquid ex quasi commodi sunt repellat ea accusantium ducimus optio fugiat nobis?",
+  "skills": "Skills",
+  "software": "Software",
+  "others": "Others",
+  "yourName": "Name",
+  "yourEmail": "Email",
+  "yourMessage": "Message",
+  "submit": "<input type='submit' name='submit' value='Submit'>"
+}

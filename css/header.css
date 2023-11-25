@@ -12,10 +12,13 @@
 
 .header-menu{
 	display: flex;
+	align-items: center;
+
 }
 
 .header-name{
 	display: flex;
+	align-items: center;
 }
 
 .header-link{
@@ -53,7 +56,7 @@
 	display: none;
 	position: absolute;
 	top: 58px;
-	left: -12px;
+	left: -14px;
 	background-color: white;
 	z-index: 1;
 }
@@ -69,6 +72,15 @@
 
 .show {display: block;}
 
-.language-flag{
-	width: 32px;
+.flag{
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+	cursor: pointer;
+}
+
+a.flag{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
 }
