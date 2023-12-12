@@ -26,7 +26,13 @@ export class Carousel{
 
 		let arrowLeft = this.createArrow('<', () => this.left());
 		this.elem.prepend(arrowLeft);
+		let arr = Array.from(this.elem.children);
+		console.log(arr);
+		let leftArrow = arr[0];
+		let rightArrow = arr[arr.length-1];
+		leftArrow.style.height = arr[this.currentSlide+1].clientWidth/2+"px";
 
+		rightArrow.style.height = arr[this.currentSlide + this.options.slideVisible].clientWidth/2+"px";
 	}
 
 
@@ -51,7 +57,9 @@ export class Carousel{
 
 	display(){
 		let arr = Array.from(this.elem.children);
-		
+		let leftArrow = arr[0];
+		let rightArrow = arr[arr.length-1];
+
 		for (let i = 1; i < arr.length-1; i++) {
 			if(i >= this.currentSlide+1 && i < this.currentSlide+1 + this.options.slideVisible){
 				arr[i].style.display = 'block';
@@ -60,12 +68,9 @@ export class Carousel{
 			}
 			
 		}
-		// if(this.currentSlide+1 + this.options.slideVisible > this.nItems){ Autre version
-		// 	let n = (this.currentSlide+1 + this.options.slideVisible) % this.nItems;
-		// 	for (let i = 1; i < n; i++) {
-		// 		arr[i].style.display = 'block';
-		// 	}
-		// }
+		leftArrow.style.height = arr[this.currentSlide+1].clientHeight+"px";
+		rightArrow.style.height = arr[this.currentSlide + this.options.slideVisible].clientHeight+"px";
+		
 	}
 
 

@@ -5,7 +5,9 @@ let langs = [];
 
 onload = () => {
 	flags.forEach(flag => {
-		flag.style.backgroundImage = 'url(./ressources/icon/lang/'+flag.classList[0]+'.png)';
+		console.log('url(/ressources/icon/lang/'+flag.classList[0]+'.png)');
+		flag.style.backgroundImage = 'url(/ressources/icon/lang/'+flag.classList[0]+'.png)';
+		console.log(flag);
 		langs.push(flag.classList[0]);
 		if(flag.classList[flag.classList.length-1] != 'dropbtn') {
 			flag.addEventListener('click', () => {
@@ -28,7 +30,7 @@ class Translate{
 		let _self = this;
 		let xrhFile = new XMLHttpRequest();
 		//load content data 
-		xrhFile.open("GET", "ressources/lang/"+this.lng+".json", false);
+		xrhFile.open("GET", "/ressources/lang/"+this.lng+".json", false);
 		xrhFile.onreadystatechange = function ()
 		{
 			if(xrhFile.readyState === 4)

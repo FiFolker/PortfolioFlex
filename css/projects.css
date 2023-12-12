@@ -1,0 +1,77 @@
+html {
+    scroll-behavior: smooth;
+    margin:0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+    line-height: 1.5;
+    font-family: Verdana, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin:0;
+    background-image: url('../ressources/background.svg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+    
+}
+
+#resume{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+#retex{
+    background-color: #f5f5f5;
+    padding: 50px 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 60px;
+}
+
+
+
+
+section{
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0;
+
+}
+
+
+
+.carousel-retex-image{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.retex-part{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.retex-col{
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.retex-text{
+    width:80%;
+}

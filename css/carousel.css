@@ -1,0 +1,23 @@
+.arrow{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+}
+
+.arrow:not(:hover){
+    color:black;
+    background-color: transparent;
+    border-radius: .4em;
+    transition: all .5s;
+}
+
+.arrow:hover{
+    color:rgb(168, 92, 240);
+    background-color: rgba(73, 73, 73, 0.103);
+    border-radius: .4em;
+    transition: all .5s;
+}

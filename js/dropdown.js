@@ -15,7 +15,7 @@ window.onclick = function(event) {
 			}
 		}
 	}
-    if (event.target.matches('.search-btn') && !event.target.matches('#filter-items *')) {
+    if (!event.target.matches('.search-btn') && !event.target.matches('#filter-items *')) {
 		let dropdowns = document.querySelectorAll(".dropdown-search-content");
 		let i;
 		for (i = 0; i < dropdowns.length; i++) {
@@ -47,6 +47,5 @@ function filterFunction(id) {
 function check(currElem){
     if(event.target != currElem.children[1]){
         currElem.children[1].checked = !currElem.children[1].checked; 
-
     }
 }

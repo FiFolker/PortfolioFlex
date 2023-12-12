@@ -22,11 +22,11 @@ const carouselProject = document.querySelectorAll('.carousel-project .col');
 carouselProject.forEach(element => {
 	Array.from(element.children).forEach(child => {
 		if(child.classList.length > 0) {
-			child.href = "projectPages/"+child.classList[0]+".html";
+			child.href = "projectsPages/"+child.classList[0]+".html";
 			
 			let text = document.createElement('div');
 			text.appendChild(document.createTextNode(child.classList[0].includes('-') ? child.classList[0].split('-').join(' ') : child.classList[0]));
-			child.style.backgroundImage = 'url(./ressources/preview/'+ child.classList[0]+'.png)';
+			child.style.backgroundImage = 'url(/ressources/preview/'+ child.classList[0]+'.png)';
 			child.style.backgroundRepeat = 'no-repeat';
 			child.style.backgroundSize = 'cover';
 			child.style.backgroundPosition = 'center';

@@ -288,31 +288,12 @@ input[type="submit"]:not(:hover){
     transition: all .5s;
 }
 
-.arrow{
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    border:none;
-    background-color: transparent;
-    cursor: pointer;
-    height: 100%;
+
+.carousel-project .arrow{
     width: 100%;
-    align-items: center;
+    height: 433px;
 }
 
-.arrow:not(:hover){
-    color:black;
-    background-color: transparent;
-    border-radius: .4em;
-    transition: all .5s;
-}
-
-.arrow:hover{
-    color:rgb(168, 92, 240);
-    background-color: rgba(73, 73, 73, 0.103);
-    border-radius: .4em;
-    transition: all .5s;
-}
 
 .carousel-project{
     display: flex;

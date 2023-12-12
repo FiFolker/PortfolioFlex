@@ -13,5 +13,14 @@
 	"yourName": "Nom",
 	"yourEmail": "Email",
 	"yourMessage": "Message",
-	"submit": "<input type='submit' name='submit' value='Envoyer'>"
+	"submit": "<input type='submit' name='submit' value='Envoyer'>",
+	"skillUsedTitle" : "Compétences Utilisées",
+	"specificationTitle" : "Cahier des Charges",
+	"retexImageTitle" : "Images",
+	"skillsUnlockedTitle" : "Compétences Acquises",
+	"cs2eTitle": "Site Web de l'analyse de Michelin",
+	"cs2eResume": "Ca résume heinnn",
+	"cse2Specification" : "Le site web devait représenter une entreprise qui fait des analyse du macro environnement sur d'autres entreprises et l'on devait donc montrer notre analyse faites en gestion.",
+	"cs2eSkillsUsed": "HTML, CSS, PHP, SQL",
+	"cs2eSkillsUnlocked" : "J'ai appris à utiliser le HTML et le framework Bootstrap dans un projet de groupe."
 }
