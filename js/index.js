@@ -27,7 +27,12 @@ carouselProject.forEach(element => {
 			
 			let text = document.createElement('div');
 			text.appendChild(document.createTextNode(child.classList[0].includes('-') ? child.classList[0].split('-').join(' ') : child.classList[0]));
+<<<<<<< HEAD
 			child.style.backgroundImage = 'url(/PortfolioFlex/docs/assets/preview/'+ child.classList[0]+'.png)';
+=======
+			child.style.backgroundImage = 'url(/ressources/preview/'+ child.classList[0]+'.png)';
+			console.log(child.style.backgroundImage);
+>>>>>>> parent of 7746f89 (switch xmlHTTPRequest for fetch to read lang json files (better))
 			child.style.backgroundRepeat = 'no-repeat';
 			child.style.backgroundSize = 'cover';
 			child.style.backgroundPosition = 'center';

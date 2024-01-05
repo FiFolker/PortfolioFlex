@@ -24,12 +24,12 @@ class Translate{
 		this.attribute = attribute;
 		this.lng = lang;	
 	}
-	
+
 	//translate 
 	process(){
 		let _self = this;
-		//load content data 
-		fetch("/PortfolioFlex/docs/assets/lang/"+this.lng+".json")
+		// load data
+		fetch("/ressources/lang/"+this.lng+".json")
 		.then(response => response.json())
 		.then(data => {
 			let allDom = document.getElementsByTagName("*");
@@ -41,14 +41,16 @@ class Translate{
 				}
 			}
 		})
-	}
+	
+    }
 }
 
 function translate(lang, tagAttr){
-	let translate = new Translate(tagAttr, lang);
-	translate.process();
-	let currLang = document.querySelector('.languages .flag').classList[0];
+    let translate = new Translate(tagAttr, lang);
+    translate.process();
+    let currLang = document.querySelector('.languages .flag').classList[0];
 	switchFlag(currLang, lang);
+	console.log("translation ...");
 }
 
 
