@@ -1,2 +1,3 @@
 # PortfolioFlex
 New portfolio made with flex ...
+That's a big improvement to my old portfolio btw
