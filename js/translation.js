@@ -5,8 +5,8 @@ let langs = [];
 
 onload = () => {
 	flags.forEach(flag => {
-		console.log('url(/docs/assets/icon/lang/'+flag.classList[0]+'.png)');
-		flag.style.backgroundImage = 'url(/docs/assets/icon/lang/'+flag.classList[0]+'.png)';
+		console.log('url(/PortfolioFlex/docs/assets/icon/lang/'+flag.classList[0]+'.png)');
+		flag.style.backgroundImage = 'url(/PortfolioFlex/docs/assets/icon/lang/'+flag.classList[0]+'.png)';
 		console.log(flag);
 		langs.push(flag.classList[0]);
 		if(flag.classList[flag.classList.length-1] != 'dropbtn') {
@@ -29,7 +29,7 @@ class Translate{
 	process(){
 		let _self = this;
 		//load content data 
-		fetch("/docs/assets/lang/"+this.lng+".json")
+		fetch("/PortfolioFlex/docs/assets/lang/"+this.lng+".json")
 		.then(response => response.json())
 		.then(data => {
 			let allDom = document.getElementsByTagName("*");
@@ -57,7 +57,7 @@ function switchFlag(currLang, nextLang){
 	langs[langs.indexOf(currLang)] = nextLang;
 	for (let i = 0; i < flags.length; i++) {
 		flags[i].classList.replace(flags[i].classList[0], langs[i]);
-		flags[i].style.backgroundImage = 'url(./docs/assets/icon/lang/'+langs[i]+'.png)';
+		flags[i].style.backgroundImage = 'url(./PortfolioFlex/docs/assets/icon/lang/'+langs[i]+'.png)';
 		
 	}
 }

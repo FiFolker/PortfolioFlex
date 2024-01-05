@@ -25,7 +25,7 @@ function isLikeSquare(width, height) {
 
 for(let i = 0; i < size; i++) {
     let img = document.createElement('img');
-    img.src = `/docs/assets/retex/${path}/${i}.png`;
+    img.src = `/PortfolioFlex/docs/assets/retex/${path}/${i}.png`;
     img.onload = function() {
         if(this.width < smallWidth || smallWidth == 0) {
             smallWidth = this.width;
@@ -36,7 +36,7 @@ for(let i = 0; i < size; i++) {
 
 for(let i = 0; i < size; i++) {
     let img = document.createElement('img');
-    img.src = `/docs/assets/retex/${path}/${i}.png`;
+    img.src = `/PortfolioFlex/docs/assets/retex/${path}/${i}.png`;
     img.alt = `retex ${i}`;
     img.onload = function() {
         let aspectRatioCalc = aspectRatio(this.width, this.height);

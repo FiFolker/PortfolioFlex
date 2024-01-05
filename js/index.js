@@ -27,7 +27,7 @@ carouselProject.forEach(element => {
 			
 			let text = document.createElement('div');
 			text.appendChild(document.createTextNode(child.classList[0].includes('-') ? child.classList[0].split('-').join(' ') : child.classList[0]));
-			child.style.backgroundImage = 'url(/docs/assets/preview/'+ child.classList[0]+'.png)';
+			child.style.backgroundImage = 'url(/PortfolioFlex/docs/assets/preview/'+ child.classList[0]+'.png)';
 			child.style.backgroundRepeat = 'no-repeat';
 			child.style.backgroundSize = 'cover';
 			child.style.backgroundPosition = 'center';

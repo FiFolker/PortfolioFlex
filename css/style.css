@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     margin:0;
-    background-image: url('../docs/assets/background.svg');
+    background-image: url('../PortfolioFlex/docs/assets/background.svg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
