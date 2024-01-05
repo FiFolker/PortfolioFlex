@@ -5,8 +5,8 @@ let langs = [];
 
 onload = () => {
 	flags.forEach(flag => {
-		console.log('url(/PortfolioFlex/docs/assets/icon/lang/'+flag.classList[0]+'.png)');
-		flag.style.backgroundImage = 'url(/PortfolioFlex/docs/assets/icon/lang/'+flag.classList[0]+'.png)';
+		console.log('url(/PortfolioFlex/ressources/icon/lang/'+flag.classList[0]+'.png)');
+		flag.style.backgroundImage = 'url(/PortfolioFlex/ressources/icon/lang/'+flag.classList[0]+'.png)';
 		console.log(flag);
 		langs.push(flag.classList[0]);
 		if(flag.classList[flag.classList.length-1] != 'dropbtn') {
@@ -24,12 +24,12 @@ class Translate{
 		this.attribute = attribute;
 		this.lng = lang;	
 	}
-
+	
 	//translate 
 	process(){
 		let _self = this;
-		// load data
-		fetch("/ressources/lang/"+this.lng+".json")
+		//load content data 
+		fetch("/PortfolioFlex/ressources/lang/"+this.lng+".json")
 		.then(response => response.json())
 		.then(data => {
 			let allDom = document.getElementsByTagName("*");
@@ -40,17 +40,18 @@ class Translate{
 					elem.innerHTML = data[key]  ;
 				}
 			}
-		})
+		});
+	}
+
 	
-    }
 }
 
+
 function translate(lang, tagAttr){
-    let translate = new Translate(tagAttr, lang);
-    translate.process();
-    let currLang = document.querySelector('.languages .flag').classList[0];
+	let translate = new Translate(tagAttr, lang);
+	translate.process();
+	let currLang = document.querySelector('.languages .flag').classList[0];
 	switchFlag(currLang, lang);
-	console.log("translation ...");
 }
 
 
@@ -59,7 +60,7 @@ function switchFlag(currLang, nextLang){
 	langs[langs.indexOf(currLang)] = nextLang;
 	for (let i = 0; i < flags.length; i++) {
 		flags[i].classList.replace(flags[i].classList[0], langs[i]);
-		flags[i].style.backgroundImage = 'url(./PortfolioFlex/docs/assets/icon/lang/'+langs[i]+'.png)';
+		flags[i].style.backgroundImage = 'url(./ressources/icon/lang/'+langs[i]+'.png)';
 		
 	}
 }

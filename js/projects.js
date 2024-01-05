@@ -15,7 +15,6 @@ function GCF(a, b) {
 
 function aspectRatio(a, b) {
     let gcf = GCF(a, b);
-    console.log(`${a/gcf}:${b/gcf}`);
     return [a/gcf, b/gcf];
 }
 
@@ -26,7 +25,7 @@ function isLikeSquare(width, height) {
 
 for(let i = 0; i < size; i++) {
     let img = document.createElement('img');
-    img.src = `/PortfolioFlex/docs/assets/retex/${path}/${i}.png`;
+    img.src = `../ressources/retex/${path}/${i}.png`;
     img.onload = function() {
         if(this.width < smallWidth || smallWidth == 0) {
             smallWidth = this.width;
@@ -37,10 +36,9 @@ for(let i = 0; i < size; i++) {
 
 for(let i = 0; i < size; i++) {
     let img = document.createElement('img');
-    img.src = `/PortfolioFlex/docs/assets/retex/${path}/${i}.png`;
+    img.src = `/ressources/retex/${path}/${i}.png`;
     img.alt = `retex ${i}`;
     img.onload = function() {
-        console.log(this.width, this.height);
         let aspectRatioCalc = aspectRatio(this.width, this.height);
         isLikeSquare(aspectRatioCalc[0], aspectRatioCalc[1]);
         if(isLikeSquare(aspectRatioCalc[0], aspectRatioCalc[1])) {
