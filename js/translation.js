@@ -5,9 +5,9 @@ let langs = [];
 
 onload = () => {
 	flags.forEach(flag => {
-		console.log('url(/PortfolioFlex/ressources/icon/lang/'+flag.classList[0]+'.png)');
+		// console.log('url(/PortfolioFlex/ressources/icon/lang/'+flag.classList[0]+'.png)');
 		flag.style.backgroundImage = 'url(/PortfolioFlex/ressources/icon/lang/'+flag.classList[0]+'.png)';
-		console.log(flag);
+		// console.log(flag);
 		langs.push(flag.classList[0]);
 		if(flag.classList[flag.classList.length-1] != 'dropbtn') {
 			flag.addEventListener('click', () => {

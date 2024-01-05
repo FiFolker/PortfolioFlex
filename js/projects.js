@@ -25,7 +25,7 @@ function isLikeSquare(width, height) {
 
 for(let i = 0; i < size; i++) {
     let img = document.createElement('img');
-    img.src = `../ressources/retex/${path}/${i}.png`;
+    img.src = `/PortfolioFlex/ressources/retex/${path}/${i}.png`;
     img.onload = function() {
         if(this.width < smallWidth || smallWidth == 0) {
             smallWidth = this.width;
