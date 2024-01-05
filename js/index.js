@@ -12,9 +12,10 @@ icons.forEach(icon => {
 	}
 });
 
+let nbElem = Math.floor((window.innerWidth-500)/document.querySelector('.carousel-project .col a').offsetWidth);
 
 carouselList.push(new carousel.Carousel(document.querySelector('.carousel-project'), {
-	slideVisible:Math.floor((window.innerWidth-500)/document.querySelector('.carousel-project .col a').offsetWidth) == 0 ? 1 : Math.floor((window.innerWidth-500)/document.querySelector('.carousel-project .col a').offsetWidth),
+	slideVisible:nbElem == 0 ? 1 : nbElem > 4 ? 4 : nbElem ,
 }));
 
 const carouselProject = document.querySelectorAll('.carousel-project .col');
@@ -27,6 +28,7 @@ carouselProject.forEach(element => {
 			let text = document.createElement('div');
 			text.appendChild(document.createTextNode(child.classList[0].includes('-') ? child.classList[0].split('-').join(' ') : child.classList[0]));
 			child.style.backgroundImage = 'url(/ressources/preview/'+ child.classList[0]+'.png)';
+			console.log(child.style.backgroundImage);
 			child.style.backgroundRepeat = 'no-repeat';
 			child.style.backgroundSize = 'cover';
 			child.style.backgroundPosition = 'center';

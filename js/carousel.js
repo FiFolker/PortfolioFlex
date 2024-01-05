@@ -27,12 +27,11 @@ export class Carousel{
 		let arrowLeft = this.createArrow('<', () => this.left());
 		this.elem.prepend(arrowLeft);
 		let arr = Array.from(this.elem.children);
-		console.log(arr);
 		let leftArrow = arr[0];
 		let rightArrow = arr[arr.length-1];
-		leftArrow.style.height = arr[this.currentSlide+1].clientWidth/2+"px";
+		leftArrow.style.height = arr[this.currentSlide+1].clientWidth/2+"px" != "0px" ? arr[this.currentSlide+1].clientWidth/2+"px" : "200px";
 
-		rightArrow.style.height = arr[this.currentSlide + this.options.slideVisible].clientWidth/2+"px";
+		rightArrow.style.height = arr[this.currentSlide + this.options.slideVisible].clientWidth/2+"px" != "0px" ? arr[this.currentSlide + this.options.slideVisible].clientWidth/2+"px" : "200px";
 	}
 
 

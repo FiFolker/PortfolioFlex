@@ -18,9 +18,58 @@
 	"specificationTitle" : "Cahier des Charges",
 	"retexImageTitle" : "Images",
 	"skillsUnlockedTitle" : "Compétences Acquises",
+
 	"cs2eTitle": "Site Web de l'analyse de Michelin",
 	"cs2eResume": "Ca résume heinnn",
-	"cse2Specification" : "Le site web devait représenter une entreprise qui fait des analyse du macro environnement sur d'autres entreprises et l'on devait donc montrer notre analyse faites en gestion.",
+	"cs2eSpecification" : "Le site web devait représenter une entreprise qui fait des analyse du macro environnement sur d'autres entreprises et l'on devait donc montrer notre analyse faites en gestion.",
 	"cs2eSkillsUsed": "HTML, CSS, PHP, SQL",
-	"cs2eSkillsUnlocked" : "J'ai appris à utiliser le HTML et le framework Bootstrap dans un projet de groupe."
+	"cs2eSkillsUnlocked" : "J'ai appris à utiliser le HTML et le framework Bootstrap dans un projet de groupe.",
+
+	"odomoResume": "Ca résume heinnn",
+	"odomoSpecification" : "Le projet Odomo est une représentation de station météorologique personnelle en Java contenant une partie Météo, Chauffage et Jardin. Cette dernière étant à faire tout seul et j'y ai réalisé un système d'hygrométrie.",
+	"odomoSkillsUsed": "Netbeans, Java",
+	"odomoSkillsUnlocked" : "Maitrise des matrices | Bases de la Programmation Orienté Objet",
+
+	"biosphere7Resume": "Ca résume heinnn",
+	"biosphere7Specification" : "Biosphère 7 est un jeu de plateau se jouant à deux joueurs et où l’on peut couper des plantes ou les planter. Ce projet était séparé en 2 phases, conception des actions possibles et IA. En voici la première.",
+	"biosphere7SkillsUsed": "Netbeans, Java",
+	"biosphere7SkillsUnlocked" : "Maitrise des matrices pour le plateau | Programmation Orienté Objet Avancé | Fonctionnement d'une IA basique",
+
+	"biosphere7iaResume": "Ca résume heinnn",
+	"biosphere7iaSpecification" : "IA Biosphère 7 est la seconde phase de Biosphère 7 où l'on doit faire des IA qui s'affrontent sur le jeu et ont pour objectif de gagner",
+	"biosphere7iaSkillsUsed": "Netbeans, Java",
+	"biosphere7iaSkillsUnlocked" : "Maitrise des matrices pour le plateau | Programmation Orienté Objet Avancé | Fonctionnement d'une IA basique",
+
+	"biosphere7guiResume": "Ca résume heinnn",
+	"biosphere7guiSpecification" : "Gui Biosphere 7 est un projet indépendant de l'IUT que j'ai eu avec un camarade qui était de faire une interface graphique à Biosphère 7 et qu'il soit jouable",
+	"biosphere7guiSkillsUsed": "Netbeans, Java, Git, Java Swing",
+	"biosphere7guiSkillsUnlocked" : "Utilisation de Java Swing | Travail en groupe sur un projet externe à l'IUT | Utilisation du perlin noise",
+
+	"hyperstellarResume": "Ca résume heinnn",
+	"hyperstellarSpecification" : "C'est une adapatation de jeu de plateau en jeu vidéo où le but du jeu est d'arriver à 150 points en défaussant des cartes de couleurs grâce à nos pions qui peuvent effectuer diversent actions dans les salles.",
+	"hyperstellarSkillsUsed": "C#, .NET, Visual Studio 2022",
+	"hyperstellarSkillsUnlocked" : "Création d'un jeu vidéo | Utilisation de C# | Utilisation de .NET | Travail par groupe de 4",
+
+	"bddFestivalTitle": "Base de donnée de Festival",
+	"bddFestivalResume": "Ca résume heinnn",
+	"bddFestivalSpecification" : "Ce projet avait pour objectif la création d'une base de donnée pour des festivals à partir d'une consigne donnée et d'un MCD à faire avant de commencer la base de donnée. Il y avait aussi comme objectif de faire une carte mentale sur la qualité des données.",
+	"bddFestivalSkillsUsed": "WinDesign, Windows SQL Server, SQL",
+	"bddFestivalSkillsUnlocked" : "Création d'une base de donnée | Création d'un MCD ",
+
+	"installationPosteTitle": "Installation d'un poste",
+	"installationPosteResume": "Ca résume heinnn",
+	"installationPosteSpecification" : "Setup d'un machine virtuelle de 0 en créant 2 comptes et installant des logiciels afin de pouvoir remplir les nécéssités des clients qui étaient de pouvoir coder.",
+	"installationPosteSkillsUsed": "VMWare, Manjaro",
+	"installationPosteSkillsUnlocked" : "Création d'une VM avec VMWare | Installation d'un OS | Installation de logiciels | Création de comptes utilisateurs | Définition de permission sur des comptes | Utilisation de Manjaro",
+
+	"analyseMichelinTitle": "Analyse de Michelin",
+	"analyseMichelinResume": "Ca résume heinnn",
+	"analyseMichelinSpecification" : "La SAE de gestion avait pour objectif d'analyser le macro environnement d'une entreprise, ici Michelin.",
+	"analyseMichelinSkillsUsed": "Excel, PESTEL, Porter",
+	"analyseMichelinSkillsUnlocked" : "Utilisation d'un PESTEL | Utilisation de Porter | Recherche de documents ",
+
+	"miniRogueResume": "Ca résume heinnn",
+	"miniRogueSpecification" : "Mini Rogue est un jeu vidéo 2D où le but est de tuer le boss final en passant par des salles et en tuant des monstres. A chaque salle nous devons lancer des dés afin d'effectuer une action pouvant résulter en un malus ou un bonus. Il y a plusieurs classes choisissables au début de la partie avec des caractéristiques et des sorts différents. Il y a aussi des coffres qui peuvent être ouverts et qui peuvent contenir des armes ou des potions. C'est une adaption d'un jeu de société de dé existant.",
+	"miniRogueSkillsUsed": "Java Swing, Java, Git",
+	"miniRogueSkillsUnlocked" : "Gestion de la création d'un jeu de A à Z | Organisation du code par package | Conceptualisation d'un jeu vidéo 2D  "
 }

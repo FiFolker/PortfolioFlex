@@ -317,7 +317,7 @@ input[type="submit"]:not(:hover){
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 210%;
     font-weight: bold;
     text-decoration: none;
     
