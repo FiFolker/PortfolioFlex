@@ -24,42 +24,31 @@ class Translate{
 		this.attribute = attribute;
 		this.lng = lang;	
 	}
-
+	
 	//translate 
 	process(){
 		let _self = this;
-		let xrhFile = new XMLHttpRequest();
 		//load content data 
-		xrhFile.open("GET", "/ressources/lang/"+this.lng+".json", false);
-		xrhFile.onreadystatechange = function ()
-		{
-			if(xrhFile.readyState === 4)
-			{
-				if(xrhFile.status === 200 || xrhFile.status == 0)
-				{
-					let LngObject = JSON.parse(xrhFile.responseText);
-					let allDom = document.getElementsByTagName("*");
-					for(const element of allDom){
-						let elem = element;
-						let key = elem.getAttribute(_self.attribute);
-						if(key != null) {
-							elem.innerHTML = LngObject[key]  ;
-						}
-					}
-				
+		fetch("/ressources/lang/"+this.lng+".json")
+		.then(response => response.json())
+		.then(data => {
+			let allDom = document.getElementsByTagName("*");
+			for(const element of allDom){
+				let elem = element;
+				let key = elem.getAttribute(_self.attribute);
+				if(key != null) {
+					elem.innerHTML = data[key]  ;
 				}
 			}
-		}
-		xrhFile.send();
-    }
+		})
+	}
 }
 
 function translate(lang, tagAttr){
-    let translate = new Translate(tagAttr, lang);
-    translate.process();
-    let currLang = document.querySelector('.languages .flag').classList[0];
+	let translate = new Translate(tagAttr, lang);
+	translate.process();
+	let currLang = document.querySelector('.languages .flag').classList[0];
 	switchFlag(currLang, lang);
-	console.log("translation ...");
 }
 
 

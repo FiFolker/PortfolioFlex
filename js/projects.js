@@ -15,7 +15,6 @@ function GCF(a, b) {
 
 function aspectRatio(a, b) {
     let gcf = GCF(a, b);
-    console.log(`${a/gcf}:${b/gcf}`);
     return [a/gcf, b/gcf];
 }
 
@@ -40,7 +39,6 @@ for(let i = 0; i < size; i++) {
     img.src = `/ressources/retex/${path}/${i}.png`;
     img.alt = `retex ${i}`;
     img.onload = function() {
-        console.log(this.width, this.height);
         let aspectRatioCalc = aspectRatio(this.width, this.height);
         isLikeSquare(aspectRatioCalc[0], aspectRatioCalc[1]);
         if(isLikeSquare(aspectRatioCalc[0], aspectRatioCalc[1])) {
