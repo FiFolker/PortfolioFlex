@@ -36,7 +36,7 @@ for(let i = 0; i < size; i++) {
 
 for(let i = 0; i < size; i++) {
     let img = document.createElement('img');
-    img.src = `/ressources/retex/${path}/${i}.png`;
+    img.src = `/PortfolioFlex/ressources/retex/${path}/${i}.png`;
     img.alt = `retex ${i}`;
     img.onload = function() {
         let aspectRatioCalc = aspectRatio(this.width, this.height);
