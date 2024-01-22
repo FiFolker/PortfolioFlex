@@ -76,3 +76,13 @@ section{
 .retex-text{
     width:80%;
 }
+
+.skills{
+    border: 1px solid black;
+    border-radius: .4em;
+    background-color: #c2b9b9;
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
