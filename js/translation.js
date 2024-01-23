@@ -5,8 +5,8 @@ let langs = [];
 
 onload = () => {
 	flags.forEach(flag => {
-		// flag.style.backgroundImage = 'url(/PortfolioFlex/ressources/icon/lang/'+flag.classList[0]+'.png)';
-		flag.style.backgroundImage = 'url(/ressources/icon/lang/'+flag.classList[0]+'.png)';
+		flag.style.backgroundImage = 'url(/PortfolioFlex/ressources/icon/lang/'+flag.classList[0]+'.png)';
+		// flag.style.backgroundImage = 'url(/ressources/icon/lang/'+flag.classList[0]+'.png)';
 		langs.push(flag.classList[0]);
 		if(flag.classList[flag.classList.length-1] != 'dropbtn') {
 			flag.addEventListener('click', () => {
@@ -28,8 +28,8 @@ class Translate{
 	process(){
 		let _self = this;
 		//load content data 
-		fetch("/ressources/lang/"+this.lng+".json")
-		// fetch("/PortfolioFlex/ressources/lang/"+this.lng+".json")
+		// fetch("/ressources/lang/"+this.lng+".json")
+		fetch("/PortfolioFlex/ressources/lang/"+this.lng+".json")
 		.then(response => response.json())
 		.then(data => {
 			let allDom = document.getElementsByTagName("*");
