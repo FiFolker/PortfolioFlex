@@ -71,5 +71,10 @@
 	"miniRogueResume": "Projet personnel de programmation d'un jeu vidéo en Java",
 	"miniRogueSpecification" : "Mini Rogue est un jeu vidéo 2D où le but est de tuer le boss final en passant par des salles et en tuant des monstres. A chaque salle nous devons lancer des dés afin d'effectuer une action pouvant résulter en un malus ou un bonus. Il y a plusieurs classes choisissables au début de la partie avec des caractéristiques et des sorts différents. Il y a aussi des coffres qui peuvent être ouverts et qui peuvent contenir des armes ou des potions. C'est une adaption d'un jeu de société de dé existant.",
 	"miniRogueSkillsUsed": "<div class='skills'>Java Swing</div><div class='skills'>Java</div><div class='skills'>Git</div>",
-	"miniRogueSkillsUnlocked" : "Gestion de la création d'un jeu de A à Z | Organisation du code par package | Conceptualisation d'un jeu vidéo 2D  "
+	"miniRogueSkillsUnlocked" : "Gestion de la création d'un jeu de A à Z | Organisation du code par package | Conceptualisation d'un jeu vidéo 2D  ",
+
+	"flixnetResume": "Projet à l'université de programmation d'un site web style allociné en groupe avec la méthode scrum",
+	"flixnetSpecification" : "FlixNet est un site web qui réfère des séries et qui permet de les noter et de les commenter de voir leur notes. Il y a aussi une partie administration qui permet de gérer les utilisateurs, les séries et les commentaires. On peut ajouter des séries via une API. Il y a aussi une partie recherche qui permet de rechercher des séries par nom ou par genre. Il y a aussi une partie profil qui permet de voir les séries que l'on a noté et commenté, celles que l'on suit que l'on a regardé avec leur statut si elles sont finis, en cours où à regarder. ",
+	"flixnetSkillsUsed": "<div class='skills'>Symphony</div><div class='skills'>Scrum</div><div class='skills'>PHP</div><div class='skills'>Twig</div><div class='skills'>TailWind</div><div class='skills'>Doctrine</div>",
+	"flixnetSkillsUnlocked" : "Utilisation de Symphony | Utilisation de Twig | Utilisation de TailWind | Utilisation de Scrum | Utilisation d'une API | Utilisation de Git | Utilisation de PHP | Utilisation de SQL | Utilisation de Doctrine"
 }

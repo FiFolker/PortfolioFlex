@@ -88,6 +88,10 @@ body {
     border-radius: .4em;
 }
 
+.text-black div{
+    color: black !important;
+}
+
 .links img{
     width: 64px;
 }
